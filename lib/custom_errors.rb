@@ -9,9 +9,9 @@ class Person
     self.partner = person
       if person.class != Person
         begin
-          raise YourCustomError
-            rescue YourCustomError
-              puts error.message
+          raise PartnerError
+            rescue PartnerError => error
+        puts error.message
       end
      else
     person.partner = self
